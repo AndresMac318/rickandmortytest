@@ -1,0 +1,18 @@
+<div class="row m-3">
+    <h3>Detalle del personaje</h3>
+</div>
+
+<div class="row m-3">
+    <div class="container-character">
+        <img [src]="(character$ | async)?.image" alt="image" class="rounded">
+        <div class="container-data">
+            <h3 class="mb-3">Información</h3>
+            <div class="list-group">
+                <p><span>Nombre:</span> {{ (character$ | async)?.name }}</p>
+                <p><span>Estado:</span> {{ (character$ | async)?.status }}</p>
+                <p><span>Especie:</span> {{ (character$ | async)?.species }}</p>
+                <p><span>Genero:</span> {{ (character$ | async)?.gender }}</p>
+                <p><span>Fecha de creación:</span> {{ (character$ | async)?.created | date }}</p>
+            </div>
+    </div>
+</div>

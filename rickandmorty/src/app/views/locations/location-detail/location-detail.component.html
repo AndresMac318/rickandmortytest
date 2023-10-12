@@ -1,0 +1,19 @@
+<div class="row m-3">
+    <h3>Detalle del Lugar</h3>
+</div>
+
+<div class="row m-3">
+    <div class="card-content">
+        <div class="card-content__container-data">
+            <div class="list-group">
+                <p><span>Nombre:</span> {{ (location$ | async)?.name }}</p>
+                <p><span>Tipo:</span> {{ (location$ | async)?.type }}</p>
+                <p><span>Dimension:</span> {{ (location$ | async)?.dimension }}</p>
+                <p><span>Fecha de creación:</span> {{ (location$ | async)?.created | date }}</p>
+            </div>
+
+            <figure>
+                <img src="../../../../assets/img/map-icon.png" alt="">
+            </figure>
+    </div>
+</div>

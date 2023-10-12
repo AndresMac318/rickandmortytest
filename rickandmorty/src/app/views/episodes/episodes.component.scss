@@ -1,0 +1,50 @@
+.header-content {
+    display: flex;
+    flex-flow: column nowrap;
+    &__input{
+        border: solid gray 1px;
+        border-radius: 8px;
+        padding: 8px;
+    }
+    @media screen and (width > 768px) {
+        &__input{
+            max-width: 46vw;;
+        }
+    }
+}
+
+.card-content {
+    min-width: 270px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+
+    @media screen and (width > 640px) {
+        max-width: 46vw;
+    }
+
+    &:hover{
+        box-shadow: 1px 1px 4px 1px rgba(79, 231, 193, 0.556);
+        cursor: pointer;
+    }
+
+    &__imgcontainer{
+        flex-basis: 124px;
+        img {
+            height: 110px;
+            width: 110px;
+        }
+    }
+
+    .col{
+        .card-body{
+            .card-title{
+                color: #4cb5c3
+            }
+        }
+    }
+}

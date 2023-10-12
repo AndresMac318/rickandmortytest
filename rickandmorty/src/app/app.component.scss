@@ -1,0 +1,15 @@
+.containerapp {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+
+    &__main {
+        flex-grow: 1;
+    }
+    &__footer {
+        background-color: #a9f3fd;
+        color: black;
+        text-align: center;
+        height: 30px;
+    }
+}

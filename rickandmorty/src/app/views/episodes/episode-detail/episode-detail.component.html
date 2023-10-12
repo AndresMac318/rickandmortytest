@@ -1,0 +1,18 @@
+<div class="row m-3">
+    <h3>Detalle del Episodio</h3>
+</div>
+
+<div class="row m-3">
+    <div class="card-content">
+        <div class="card-content__container-data">
+            <div class="list-group">
+                <p><span>Nombre:</span> {{(episode$ | async)?.name}}</p>
+                <p><span>Episodio:</span> {{(episode$ | async)?.episode}}</p>
+                <p><span>Fecha de creación:</span> {{(episode$ | async)?.created | date}}</p>
+            </div>
+            <figure>
+                <img src="../../../../assets/img/movie-icon.png" alt="">
+            </figure>
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="row my-4 mx-2">
+  <div class="header-content">
+    <h3 class="header-content__title" >Lista de Personajes</h3>
+    <input class="header-content__input" type="text" name="" id="" placeholder="Buscar por nombre, estado, especie..." (keyup)="buscar(txtTermino.value)"
+    #txtTermino>
+  </div>
+</div>
+<div class="row m-3 justify-content-between">
+  <div *ngFor="let character of characters$ | async"
+      class="card-content"
+      (click)="goDetail(character.id)"
+      >
+      <div class="card-content__imgcontainer">
+        <img [src]="character.image" class="rounded-start" alt="...">
+      </div>
+      <div class="col">
+        <div class="card-body">
+            <h5 class="card-title mb-2">{{ character.name }}</h5>
+            <p class="m-0">Estado: </p>
+            <span class="badge" [ngClass]="{'text-bg-success': character.status === 'Alive', 'text-bg-danger': character.status === 'Dead','text-bg-dark': character.status === 'unknown'}">{{ character.status }}</span>
+        </div>
+      </div>
+  </div>
+</div>
+
+
