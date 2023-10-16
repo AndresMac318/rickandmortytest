@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DetailLocationComponent } from './detail-location.component';
+
+describe('DetailLocationComponent', () => {
+  let component: DetailLocationComponent;
+  let fixture: ComponentFixture<DetailLocationComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [DetailLocationComponent]
+    });
+    fixture = TestBed.createComponent(DetailLocationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

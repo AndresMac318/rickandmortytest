@@ -1,14 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-
-import { CharactersApiActions } from 'src/app/state/actions/characters.actions';
-
+import { Observable, catchError, of } from 'rxjs';
 import { Character } from 'src/app/interfaces/apiresponse.interface';
 import { DataAPIService } from 'src/app/services/data-api.service';
-import { Observable, catchError, of } from 'rxjs';
+import { CharactersApiActions } from 'src/app/state/actions/characters.actions';
 import { searchCharacters, selectCharactersState } from 'src/app/state/selectors/characters.selectors';
-
 import Swal from 'sweetalert2';
 
 @Component({
@@ -16,7 +13,7 @@ import Swal from 'sweetalert2';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.scss']
 })
-export class CharactersComponent implements OnInit {
+export class CharactersComponent {
 
   characters$: Observable<any> = new Observable();
   charactersTemp$: Observable<any> = new Observable();
@@ -54,9 +51,7 @@ export class CharactersComponent implements OnInit {
   }
 
   goDetail(id: string){
-    this.router.navigateByUrl(`/characters/${id}`);
+    this.router.navigateByUrl(`character/${id}`);
   }
-
-  
 
 }

@@ -2,16 +2,15 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, filter, map } from 'rxjs';
-
-import { selectEpisode } from 'src/app/state/selectors/episodes.selectors';
 import { Episode } from 'src/app/interfaces/apiresponse.interface';
+import { selectEpisode } from 'src/app/state/selectors/episodes.selectors';
 
 @Component({
-  selector: 'app-episode-detail',
-  templateUrl: './episode-detail.component.html',
-  styleUrls: ['./episode-detail.component.scss']
+  selector: 'app-detail-episode',
+  templateUrl: './detail-episode.component.html',
+  styleUrls: ['./detail-episode.component.scss']
 })
-export class EpisodeDetailComponent {
+export class DetailEpisodeComponent {
 
   episode$: Observable<Episode> = new Observable();
   id: string;

@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, catchError, of } from 'rxjs';
 import { Episode } from 'src/app/interfaces/apiresponse.interface';
-
 import { DataAPIService } from 'src/app/services/data-api.service';
 import { EpisodesApiActions } from 'src/app/state/actions/episodes.actions';
 import { searchEpisodes, selectEpisodesState } from 'src/app/state/selectors/episodes.selectors';
@@ -14,7 +13,7 @@ import Swal from 'sweetalert2';
   templateUrl: './episodes.component.html',
   styleUrls: ['./episodes.component.scss']
 })
-export class EpisodesComponent implements OnInit {
+export class EpisodesComponent {
 
   episodes$: Observable<any> = new Observable();
   episodesTemp$: Observable<any> = new Observable();
@@ -51,7 +50,7 @@ export class EpisodesComponent implements OnInit {
   }
 
   goDetail(id: string){
-    this.router.navigateByUrl(`/episodes/${id}`);
+    this.router.navigateByUrl(`/episode/${id}`);
   }
 
 }

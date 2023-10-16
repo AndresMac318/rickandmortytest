@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable, filter, map } from 'rxjs';
-
 import { selectLocation } from 'src/app/state/selectors/locations.selectors';
-import { Location } from 'src/app/interfaces/apiresponse.interface';
+
+import { Location } from "src/app/interfaces/apiresponse.interface";
 
 @Component({
-  selector: 'app-location-detail',
-  templateUrl: './location-detail.component.html',
-  styleUrls: ['./location-detail.component.scss']
+  selector: 'app-detail-location',
+  templateUrl: './detail-location.component.html',
+  styleUrls: ['./detail-location.component.scss']
 })
-export class LocationDetailComponent {
+export class DetailLocationComponent {
 
   location$: Observable<Location> = new Observable();
   id: string;

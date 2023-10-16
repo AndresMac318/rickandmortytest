@@ -50,7 +50,7 @@ export class LocationsComponent implements OnInit {
   }
 
   goDetail(id: string){
-    this.router.navigateByUrl(`/locations/${id}`);
+    this.router.navigateByUrl(`/location/${id}`);
   }
 
 }
