@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
+In this project a state manager (NgRX) was used to keep track of all the data in the application, in addition to having a connection with an API to obtain data dynamically (developed with GraphQL Rick&MortyAPI)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
